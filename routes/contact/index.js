@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const get = require('./get');
+router.route('/contact').get(function(req, res) {
+  res.render('contact');
+});
 
-router.get('/contact', get);
+module.exports = router;
